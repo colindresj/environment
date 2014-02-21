@@ -34,6 +34,12 @@ PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 export PG_USERNAME="JC"
 
 # ---------------------
+# Heroku
+# ---------------------
+# Add toolbelt to path
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# ---------------------
 # MySQL
 # ---------------------
 alias mysql_start="mysql.server start"
