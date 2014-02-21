@@ -24,3 +24,4 @@
   - List of formulae for install
   - List of gems for install
   - List of packages for install
+  - List of rbenv plugins
