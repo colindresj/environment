@@ -19,6 +19,7 @@
 - Sublime
   - List of packages to install
   - List of themes to install
+  - Upload snippets
 
 - Add Ons
   - List of formulae for install
