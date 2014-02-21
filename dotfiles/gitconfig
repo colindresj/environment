@@ -1,0 +1,14 @@
+[user]
+  name = JC
+  email = jorge.e.colindres@gmail.com
+[credential]
+  helper = osxkeychain
+[alias]
+  undopush = push -f origin HEAD^:master
+[color]
+  ui = true
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = nano
+[push]
+  default = tracking
