@@ -13,12 +13,9 @@
   - Create ssh directory and keys
   - Sets up git from homebrew
   - Sets up terminal with IR Black
-  - Sets up Sublime the way I like it
-  - Install Sublime package control and some packages
+  - Copy Sublime snippets appropriately
 
 - Sublime
-  - List of packages to install
-  - List of themes to install
   - Upload snippets
 
 - Add Ons
