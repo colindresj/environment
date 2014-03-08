@@ -1,5 +1,4 @@
 - Install scripts
-  - Homebrew and some formulae
   - Rbenv
   - Ruby versions and some gems
   - Node and NPM with some packages
@@ -8,9 +7,6 @@
   - Chrome
 
 - Setup scripts
-  - Creates dot files and copies content from repo
-  - Create ssh directory and keys
-  - Sets up git from homebrew
   - Sets up terminal with IR Black
 
 - Add Ons
@@ -18,3 +14,5 @@
   - List of gems for install
   - List of packages for install
   - List of rbenv plugins
+
+- Clean up
