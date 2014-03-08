@@ -1,5 +1,4 @@
 - Install scripts
-  - Command Line Tools
   - Homebrew and some formulae
   - Rbenv
   - Ruby versions and some gems
