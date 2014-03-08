@@ -13,10 +13,6 @@
   - Create ssh directory and keys
   - Sets up git from homebrew
   - Sets up terminal with IR Black
-  - Copy Sublime snippets appropriately
-
-- Sublime
-  - Upload snippets
 
 - Add Ons
   - List of formulae for install

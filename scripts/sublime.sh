@@ -24,6 +24,9 @@ curl -L -o "$subl_settings/Installed Packages/$pkg_control" "$pkg_url"
 pkg_settings="Package Control.sublime-settings"
 cp "$SETTINGS/sublime/$pkg_settings" "$subl_settings/Packages/User/$pkg_settings"
 
-#Set Fetch preferences
+# Set Fetch preferences
 fetch_prefs="Fetch.sublime-settings"
 cp "$SETTINGS/sublime/$fetch_prefs" "$subl_settings/Packages/User/$fetch_prefs"
+
+# Copy over snippets
+cp -a "$SETTINGS/sublime/snippets/." "$subl_settings/Packages/User/"
