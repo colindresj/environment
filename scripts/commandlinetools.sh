@@ -8,7 +8,7 @@ case $osx_version in
 esac
 
 # Check for Command Line Tools based on OS versions
-if [ ! -z $(pkgutil --pkgs=com.apple.pkg.$cmdline_version) ]; then
+if [[ ! -z $(pkgutil --pkgs=com.apple.pkg.$cmdline_version) ]]; then
   echo "Command Line Tools are installed";
 elif [[ $osx_version < "10.9" ]]; then
   echo "Command Line Tools are not installed."
