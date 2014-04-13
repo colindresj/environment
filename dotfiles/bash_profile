@@ -198,3 +198,8 @@ alias gulp_init="npm install --save-dev gulp gulp-util && npm init"
 # NGrok
 # ---------------------
 alias ngrok="./ngrok"
+
+# ---------------------
+# Cask
+# ---------------------
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
