@@ -1,1 +1,0 @@
-- Default osx and app settings
