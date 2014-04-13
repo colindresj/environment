@@ -65,6 +65,7 @@ function install_gems () {
     guard
     guard-cucumber
     httparty
+    chef
     guard-rails
     guard-rspec
     guard-livereload
@@ -77,6 +78,24 @@ function install_gems () {
     :
     echo "Installing $i gem..."
     gem install $i
+  done
+}
+
+install_vagrant_plugins () {
+  echo "Installing useful vagrant plugins..."
+
+  # TODO use parse function instead of this super long hard-coded array
+  declare -a plugins=(
+    vagrant-berkshelf
+    vagrant-hostmanager
+    vagrant-omnibus
+  )
+
+ for i in "${plugins[@]}"
+  do
+    :
+    echo "Installing $i..."
+    vagrant plugin install $i
   done
 }
 
@@ -94,6 +113,8 @@ rbenv global $RUBY_DEFAULT
 gem regenerate_binstubs
 
 install_gems
+
+install_vagrant_plugins
 
 # Reload bash
 source ~/.bash_profile
