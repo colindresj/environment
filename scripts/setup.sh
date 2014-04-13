@@ -30,11 +30,11 @@ setup_ssh () {
 }
 
 setup_terminal () {
-  echo "Set IR Black as terminal default"
-  sleep 2
+  echo "Seting IR Black as terminal default..."
   open "$SETTINGS/terminal/IR-Black.terminal"
-  read -p "$(tput setaf 4)Press Return when complete >"
-  tput sgr0
+  sleep 3
+  defaults write com.apple.terminal "Default Window Settings" -string "IR Black"
+  defaults write com.apple.terminal "Startup Window Settings" -string "IR Black"
 }
 
 # Own all directories from home and down
