@@ -1,2 +1,1 @@
-- NPM packages
 - Default osx and app settings
