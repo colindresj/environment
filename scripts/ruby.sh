@@ -75,11 +75,11 @@ function install_gems () {
     berkshelf
   )
 
- for i in "${gems[@]}"
+ for gem in "${gems[@]}"
   do
     :
-    echo "Installing $i gem..."
-    gem install $i
+    echo "Installing $gem gem..."
+    gem install $gem
   done
 }
 

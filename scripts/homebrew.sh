@@ -50,11 +50,11 @@ function install_formulae () {
     terminal-notifier
   )
 
-  for i in "${formulae[@]}"
+  for formula in "${formulae[@]}"
   do
     :
-    echo "Installing $i formula..."
-    brew install $i
+    echo "Installing $formula formula..."
+    brew install $formula
   done
 }
 
@@ -95,11 +95,11 @@ function install_casks () {
     quicklook-json
   )
 
-  for i in "${casks[@]}"
+  for cask in "${casks[@]}"
   do
     :
-    echo "Installing $i..."
-    brew cask install $i
+    echo "Installing $cask..."
+    brew cask install $cask
   done
 }
 

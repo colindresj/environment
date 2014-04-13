@@ -1,8 +1,25 @@
 #!/bin/bash
 
 copy () {
-  echo "Copying $@..."
-  cp "$DOTFILES/$@" "${HOME}/.$@"
+  files=(bash_profile gitconfig gitignore_global pryrc)
+  destination=$HOME/dotfiles
+  backups=$HOME/dotfiles_old
+
+  echo "Creating $destination to store and track new dotfiles"
+  mkdir -p $destination
+
+  echo "Creating $backups to backup any existing dotfiles"
+  mkdir -p $backups
+
+  echo "Moving existing dotfiles from $HOME to $backups..."
+  for file in "${files[@]}"; do
+    mv "$HOME/.$file" $backups
+
+    echo "Copying new $file"
+    cp $DOTFILES/$file "$destination/.$file"
+    echo "Symlinking new $file"
+    ln -s $destination/$file $HOME/.$file
+  done
 }
 
 set_git () {
@@ -32,7 +49,7 @@ setup_ssh () {
 }
 
 setup_terminal () {
-  echo "Seting IR Black as terminal default..."
+  echo "Setting IR Black as terminal default..."
   open "$SETTINGS/terminal/IR-Black.terminal"
   sleep 3
   defaults write com.apple.terminal "Default Window Settings" -string "IR Black"
@@ -42,14 +59,12 @@ setup_terminal () {
 # Own all directories from home and down
 sudo chown -R ${USER} ~
 
-# Copy dotfiles
-copy bash_profile
-copy gitconfig
-copy gitignore_global
-copy pryrc
+# Copy and symlink dotfiles
+copy
 
 # Reloading the session
 source ~/.bash_profile
 
 setup_ssh
 setup_terminal
+
