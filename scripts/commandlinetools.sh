@@ -1,5 +1,6 @@
 osx_version=$(sw_vers -productVersion)
 echo "You're running OSX $osx_version"
+
 # Check that command line tools are installed
 case $osx_version in
   *10.9*) cmdline_version="CLTools_Executables" ;; # Mavericks
