@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function setup_brew () {
   echo "Installing Homebrew..."
   ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
@@ -102,13 +104,13 @@ function install_casks () {
 }
 
 hide_alias_arrow () {
-  `sudo mv /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AliasBadgeIcon.icns /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AliasBadgeIcon-bak.icns`
+  mv /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AliasBadgeIcon.icns /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AliasBadgeIcon-bak.icns
   echo "Removed symlink arrow from applications"
 }
 
-setup_brew
-install_formulae
+# setup_brew
+# install_formulae
 # install_casks
-# hide_alias_arrow
+hide_alias_arrow
 
 

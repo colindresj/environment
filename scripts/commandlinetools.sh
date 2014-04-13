@@ -1,3 +1,5 @@
+#!/bin/bash
+
 osx_version=$(sw_vers -productVersion)
 echo "You're running OSX $osx_version"
 

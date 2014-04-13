@@ -1,3 +1,5 @@
+#!/bin/bash
+
 subl_settings="${HOME}/Library/Application Support/Sublime Text 2"
 
 # Symlink Sublime Text 2

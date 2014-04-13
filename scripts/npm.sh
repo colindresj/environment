@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function install_modules () {
   echo "Installing useful Node modules through NPM..."
 
@@ -24,7 +26,7 @@ function install_modules () {
   do
     :
     echo "Installing $i..."
-    # npm install -g $i
+    npm install -g $i
   done
 }
 

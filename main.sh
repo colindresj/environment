@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #######################################################################################
 #### CONSTANTS
 #######################################################################################
@@ -22,8 +24,6 @@ function end_confirm () {
 }
 
 function get_user_info () {
-   echo "Please enter your password:"
-   read -s PASS
    echo "Please enter your github email:"
    read EMAIL
    echo "Your github email is: $EMAIL"
@@ -60,10 +60,14 @@ function get_user_info () {
 #######################################################################################
 #### NODE
 #######################################################################################
-start_confirm "Install Node Modules"
-source $SCRIPTS/npm.sh
-end_confirm
+# start_confirm "Install Node Modules"
+# source $SCRIPTS/npm.sh
+# end_confirm
 
 #######################################################################################
 #### OSX AND APPLICATION SETTINGS
 #######################################################################################
+# start_confirm "Set preferences"
+# source $SCRIPTS/osx_settings.sh
+# source $SCRIPTS/sublime.sh
+# end_confirm

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 copy () {
   echo "Copying $@..."
   cp "$DOTFILES/$@" "${HOME}/.$@"

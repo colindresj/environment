@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install Rbenv plugins
 function install_rbenv_plugins () {
   rbenv_plugins=~/.rbenv/plugins
