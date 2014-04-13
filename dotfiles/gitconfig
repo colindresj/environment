@@ -5,10 +5,18 @@
   helper = osxkeychain
 [alias]
   undopush = push -f origin HEAD^:master
+  addremove = add . && ls-files --deleted | xargs git rm
+  st = status
+  co = checkout
+  cob = checkout -b
+  br = branch
+  github = remote show origin
+  update = !git fetch origin && git rebase origin/master
+  ir = !git rebase -i origin/master
 [color]
   ui = true
 [core]
-  excludesfile = ~/.gitignore_global
+  excludesfile = /Users/JC/.gitignore_global
   editor = nano
 [push]
   default = tracking

@@ -5,15 +5,21 @@ export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 # ---------------------
 # General Aliases
 # ---------------------
+alias bash_profile="subl ~/.bash_profile"
 alias ll="ls -fa"
 alias rm="rm -i"
 alias b="cd .."
 alias b4="cd ../../../../"
 alias b5="cd ../../../../.."
 alias be="bundle exec"
-alias bash_profile="subl ~/.bash_profile"
 alias reload="source ~/.bash_profile"
 alias projects="cd ~/Projects"
+alias WDI="cd ~/Documents/WDI"
+alias make_test="cd ~/Desktop && mkdir testing && cd testing"
+
+# Local Servers
+alias python_server="python -m SimpleHTTPServer"
+alias node_server="http-server"
 
 # Show/Hide files
 alias show_hidden_files="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
@@ -34,12 +40,6 @@ PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 export PG_USERNAME="JC"
 
 # ---------------------
-# Heroku
-# ---------------------
-# Add toolbelt to path
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# ---------------------
 # MySQL
 # ---------------------
 alias mysql_start="mysql.server start"
@@ -55,9 +55,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # ---------------------
 # Tab Improvements
 # ---------------------
-bind "set completion-ignore-case on"
-bind "set show-all-if-ambiguous on"
-bind "TAB: menu-complete"
+bind 'set completion-ignore-case on'
+bind 'set show-all-if-ambiguous on'
+bind 'TAB: menu-complete'
 
 # ---------------------
 # Titleize Tabs
@@ -68,15 +68,27 @@ title() {
 }
 
 # ---------------------
+# Password Gen and Hashing
+# ---------------------
+passgen() {
+  if [[ $2 ]]; then
+    openssl rand -base64 10 | md5 | head -c$1; echo;
+  else
+    openssl rand -base64 $1 | head -c$1; echo;
+  fi
+}
+
+md5hash() {
+  md5 -qs $1;
+}
+
+
+# ---------------------
 # Bash History
 # ---------------------
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
-# don't put duplicate lines in the history.
-export HISTCONTROL=ignoredups
-# ignore same sucessive entries.
-export HISTCONTROL=ignoreboth
 
 # ---------------------
 # Colors
@@ -125,29 +137,29 @@ get_git_branch() {
 prompt_git() {
   local git_info git_state uc us ut st
   if ! is_git_repo || is_git_dir; then
-    return 1
+      return 1
   fi
   git_info=$(get_git_branch)
   # Check for uncommitted changes in the index
   if ! $(git diff --quiet --ignore-submodules --cached); then
-    uc="+"
+      uc="+"
   fi
   # Check for unstaged changes
   if ! $(git diff-files --quiet --ignore-submodules --); then
-    us="!"
+      us="!"
   fi
   # Check for untracked files
   if [ -n "$(git ls-files --others --exclude-standard)" ]; then
-    ut="${RED}?"
+      ut="${RED}?"
   fi
   # Check for stashed files
   if $(git rev-parse --verify refs/stash &>/dev/null); then
-    st="$"
+      st="$"
   fi
   git_state=$uc$us$ut$st
   # Combine the branch name and state information
   if [[ $git_state ]]; then
-    git_info="$git_info${RESET}[$git_state${RESET}]"
+      git_info="$git_info${RESET}[$git_state${RESET}]"
   fi
   printf "${WHITE} on ${style_branch}${git_info}"
 }
@@ -172,14 +184,13 @@ PS1+="${style_chars}\$ \[${RESET}\]"     # $ (and reset color)
 alias rails_open="open http://localhost:3000"
 
 # Rails composer (pass the project name into the argument)
-rails_composer() {
-  rails new "$@" -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb;
-}
+rails_composer() { rails new "$@" -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb; }
 
 #----------------------
 # Nodejs
 # ---------------------
-export NODE_PATH="/usr/local/bin/node"
+# export NODE_PATH="/usr/local/bin/node"
+export NODE_PATH="/usr/local/lib/node_modules"
 export PATH="/usr/local/share/npm/bin:$PATH"
 alias gulp_init="npm install --save-dev gulp gulp-util && npm init"
 
