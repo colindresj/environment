@@ -1,6 +1,12 @@
 copy () {
   echo "Copying $@..."
-  # cp "$DOTFILES/$@" "${HOME}/.$@"
+  cp "$DOTFILES/$@" "${HOME}/.$@"
+}
+
+set_git () {
+  if [[ `git config --global user.email` != "$EMAIL" ]]; then
+    git config --global user.email $EMAIL
+  fi
 }
 
 setup_ssh () {
@@ -32,7 +38,7 @@ setup_terminal () {
 }
 
 # Own all directories from home and down
-# sudo chown -R ${USER} ~
+sudo chown -R ${USER} ~
 
 # Copy dotfiles
 copy bash_profile
