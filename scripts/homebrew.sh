@@ -108,9 +108,9 @@ hide_alias_arrow () {
   echo "Removed symlink arrow from applications"
 }
 
-# setup_brew
-# install_formulae
-# install_casks
+setup_brew
+install_formulae
+install_casks
 hide_alias_arrow
 
 
