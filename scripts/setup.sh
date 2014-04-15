@@ -5,7 +5,7 @@ copy () {
   destination=$HOME/dotfiles
   backups=$HOME/dotfiles_old
 
-  echo "Creating $destination to store and track new dotfiles"
+  echo "$(tput setaf 9)Creating $destination to store and track new dotfiles"
   mkdir -p $destination
 
   echo "Creating $backups to backup any existing dotfiles"
@@ -14,9 +14,10 @@ copy () {
   echo "Moving existing dotfiles from $HOME to $backups..."
   for file in "${files[@]}"; do
     mv "$HOME/.$file" $backups
+    rm -f "$HOME/.$file"
 
     echo "Copying new $file"
-    cp $DOTFILES/$file "$destination/.$file"
+    cp $DOTFILES/$file "$destination/$file"
     echo "Symlinking new $file"
     ln -s $destination/$file $HOME/.$file
   done

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 osx_version=$(sw_vers -productVersion)
-echo "You're running OSX $osx_version"
+echo "$(tput setaf 9)You're running OSX $osx_version"
 
 # Check that command line tools are installed
 case $osx_version in

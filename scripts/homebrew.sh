@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function setup_brew () {
-  echo "Installing Homebrew..."
+  echo "$(tput setaf 9)Installing Homebrew..."
   ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
 
   brew update

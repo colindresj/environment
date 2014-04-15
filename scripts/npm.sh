@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function install_modules () {
-  echo "Installing useful Node modules through NPM..."
+  echo "$(tput setaf 3)Installing useful Node modules through NPM..."
 
   # TODO use parse function instead of this super long hard-coded array
   declare -a modules=(

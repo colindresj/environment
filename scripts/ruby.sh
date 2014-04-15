@@ -104,7 +104,7 @@ install_vagrant_plugins () {
 install_rbenv_plugins
 
 # Install Ruby version and set as global
-echo "Installing Rubies..."
+echo "$(tput setaf 3)Installing Rubies..."
 rbenv install $RUBY_DEFAULT
 rbenv rehash
 
@@ -120,4 +120,3 @@ install_vagrant_plugins
 
 # Reload bash
 source ~/.bash_profile
-
