@@ -18,36 +18,41 @@ function install_formulae () {
   echo "Tapping caskroom/versions"
   brew tap caskroom/versions
 
+  echo "Tapping thoughtbot/formulae"
+  brew tap thoughtbot/formulae
+
   echo "Installing useful formulae..."
 
-  # TODO use parse function instead of this super long hard-coded array
+  # TODO use Brewfile
   declare -a formulae=(
-    brew-cask
     apple-gcc42
     autoconf
     automake
-    git
-    hub
-    graphviz
+    brew-cask
     cmatrix
-    irssi
+    git
+    graphviz
+    hub
     imagemagick
+    irssi
+    libyaml
     mongodb
-    postgresql
     mysql
     node
-    redis
-    pianobar
     openssl
-    qt
-    readline
-    rbenv
-    ruby-build
-    rbenv-gem-rehash
-    libyaml
+    pianobar
     pkg-config
-    wget
+    postgresql
+    qt
+    rbenv
+    rbenv-gem-rehash
+    rcm
+    readline
+    redis
+    ruby-build
     terminal-notifier
+    the_silver_searcher
+    wget
   )
 
   for formula in "${formulae[@]}"
@@ -61,38 +66,38 @@ function install_formulae () {
 function install_casks () {
   echo "Installing useful apps through brew cask..."
 
-  # TODO use parse function instead of this super long hard-coded array
+  # TODO use Brewfile
   declare -a casks=(
-    google-chrome
-    firefox
-    opera
     alfred
-    dropbox
-    layervault
-    the-unarchiver
-    flux
-    cloud
-    spectacle
-    recordit
     clipmenu
+    cloud
     dash
-    sublime-text
+    dropbox
+    firefox
+    flux
+    fontprep
+    google-chrome
+    heroku-toolbelt
+    layervault
     macvim
     mou
-    sketch
-    fontprep
-    heroku-toolbelt
-    virtualbox
+    opera
     postgres
-    vagrant
-    spotify
-    slack
-    skype
-    vlc
     qlcolorcode
-    qlstephen
     qlmarkdown
+    qlstephen
     quicklook-json
+    recordit
+    sketch
+    skype
+    slack
+    spectacle
+    spotify
+    sublime-text
+    the-unarchiver
+    vagrant
+    virtualbox
+    vlc
   )
 
   for cask in "${casks[@]}"
