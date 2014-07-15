@@ -1,7 +1,17 @@
 #!/bin/bash
 
-copy () {
-  files=(bash_profile gitconfig gitignore_global pryrc)
+copy_dotfiles () {
+  files=(
+    aliases
+    bash_profile
+    bash_prompt
+    git_completion
+    gitconfig
+    gitignore_global
+    gvimrc
+    pryrc
+    vimrc
+  )
   destination=$HOME/dotfiles
   backups=$HOME/dotfiles_old
 
@@ -57,22 +67,14 @@ setup_terminal () {
   defaults write com.apple.terminal "Startup Window Settings" -string "IR Black"
 }
 
-setup_vundle () {
-  if [ ! -e $HOME/.vim/bundle/vundle ]; then
-    mkdir -p $HOME/.vim/bundle/
-    git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
-  fi
-}
-
 # Own all directories from home and down
 sudo chown -R ${USER} ~
 
 # Copy and symlink dotfiles
-copy
+copy_dotfiles
 
 # Reloading the session
 source ~/.bash_profile
 
 setup_ssh
 setup_terminal
-setup_vundle
