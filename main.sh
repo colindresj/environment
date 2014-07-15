@@ -70,4 +70,5 @@ function get_user_info () {
 # start_confirm "Set preferences"
 # source $SCRIPTS/osx_settings.sh
 # source $SCRIPTS/sublime.sh
+# source $SCRIPTS/vim.sh
 # end_confirm

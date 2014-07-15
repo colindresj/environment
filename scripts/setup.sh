@@ -57,6 +57,13 @@ setup_terminal () {
   defaults write com.apple.terminal "Startup Window Settings" -string "IR Black"
 }
 
+setup_vundle () {
+  if [ ! -e $HOME/.vim/bundle/vundle ]; then
+    mkdir -p $HOME/.vim/bundle/
+    git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
+  fi
+}
+
 # Own all directories from home and down
 sudo chown -R ${USER} ~
 
@@ -68,4 +75,4 @@ source ~/.bash_profile
 
 setup_ssh
 setup_terminal
-
+setup_vundle
