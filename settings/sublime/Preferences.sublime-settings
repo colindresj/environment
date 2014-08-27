@@ -7,20 +7,18 @@
   "debug_enable": false,
   "default_line_ending": "LF",
   "detect_indentation": true,
-  "font_size": 13.0,
+  "ensure_newline_at_eof_on_save": true,
+  "font_size": 14.0,
   "high_visibility_color": "__bracket__",
   "high_visibility_style": "outline",
   "highlight_active_indent_guide": true,
   "highlight_line": true,
   "highlight_modified_tabs": true,
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
   "line_padding_bottom": 1,
   "line_padding_top": 1,
   "match_only_adjacent": false,
   "no_multi_select_icons": true,
+  "rulers": [80],
   "search_threshold": 5000,
   "shift_tab_unindent": true,
   "show_unmatched": true,
