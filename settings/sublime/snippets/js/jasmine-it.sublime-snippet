@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[
-it('${1}', function(){
-  ${2}
+it('${1}', function (${2:done}) {
+  ${3}
 });
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>it </tabTrigger>
+  <tabTrigger>itb</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.js</scope>
 </snippet>
