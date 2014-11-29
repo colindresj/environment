@@ -30,14 +30,17 @@ function install_formulae () {
     automake
     brew-cask
     cmatrix
+    curl
     git
     graphviz
+    heroku-toolbelt
     hub
     imagemagick
     irssi
     libyaml
     mongodb
     mysql
+    ngrok
     node
     openssl
     pianobar
@@ -50,6 +53,7 @@ function install_formulae () {
     readline
     redis
     ruby-build
+    sqlite
     terminal-notifier
     the_silver_searcher
     wget
@@ -91,6 +95,7 @@ function install_casks () {
     sketch
     skype
     slack
+    sonos
     spectacle
     spotify
     sublime-text
@@ -117,5 +122,3 @@ setup_brew
 install_formulae
 install_casks
 hide_alias_arrow
-
-
