@@ -10,6 +10,9 @@ function install_rbenv_plugins () {
   git clone https://github.com/sstephenson/rbenv-default-gems.git $rbenv_plugins/rbenv-default-gems
   git clone https://github.com/rkh/rbenv-update.git $rbenv_plugins/rbenv-update
   git clone https://github.com/ianheggie/rbenv-binstubs.git $rbenv_plugins/rbenv-binstubs
+  git clone https://github.com/sstephenson/rbenv-gem-rehash.git $rbenv_plusins/rbenv-gem-rehash
+  git clone https://github.com/rkh/rbenv-whatis.git $rbenv_plusins/rbenv-whatis
+  git clone https://github.com/rkh/rbenv-use.git $rbenv_plusins/rbenv-use
 }
 
 function install_gems () {
@@ -18,61 +21,41 @@ function install_gems () {
 
   # TODO use parse function instead of this super long hard-coded array
   declare -a gems=(
-    rails
-    mysql2
-    pg
-    nokogiri
-    pry
-    pry-debugger
-    pry-nav
-    pry-rails
-    pry-remote
-    pray-stack_explorer
-    rails-erd
     annotate
+    awesome_print
+    berkshelf
     better_errors
     binding_of_caller
-    meta_request
-    redis
-    rspec
-    rspec-rails
-    ruby-graphviz
-    sass
-    sass-rails
-    selenium-webdriver
-    simplecov
-    shoulda-matchers
-    awesome_print
-    pg
-    pry
-    rspec
-    rspec-rails
-    database_cleaner
-    sinatra
-    sinatra-contrib
-    rainbow
     bourbon
-    neat
     capybara
     capybara-webkit
-    launchy
-    mongo_mapper
+    chef
     coveralls
     cucumber
-    cucumber-rails
+    database_cleaner
     dotenv
-    dotenv-rails
-    faker
-    handlebars_assets
-    guard
-    guard-cucumber
     httparty
-    chef
-    guard-rails
-    guard-rspec
-    guard-livereload
-    terminal-notifier-guard
-    berkshelf
+    launchy
+    meta_request
+    mongo_mapper
+    mysql2
+    neat
+    nokogiri
+    pg
+    pry-stack_explorer
+    pry
+    pry-nav
+    pry-remote
+    rails
+    rails-erd
+    rainbow
+    rspec
+    ruby-graphviz
+    sass
+    selenium-webdriver
+    simplecov
+    sinatra
+    sinatra-contrib
   )
 
  for gem in "${gems[@]}"

@@ -5,21 +5,23 @@ function install_modules () {
 
   # TODO use parse function instead of this super long hard-coded array
   declare -a modules=(
-    coffee-script
-    less
-    stylus
     bower
-    yo
-    generator-webapp
-    generator-gulp-webapp
-    grunt-cli
-    grunt-init
-    gulp
     browser-sync
+    coffee-script
+    generator-gulp-webapp
+    generator-webapp
+    grunt-cli
+    gulp
     http-server
+    less
+    mocha
+    node-inspector
+    nodemon
     prettyjson
     requirejs
+    stylus
     uglify-js
+    yo
   )
 
  for i in "${modules[@]}"
