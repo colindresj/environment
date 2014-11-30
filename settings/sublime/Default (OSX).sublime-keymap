@@ -1,7 +1,0 @@
-[
-  { "keys": ["super+shift+."], "command": "erb" },
-  { "keys": ["super+e"], "command": "reindent" },
-  { "keys": ["control+n+f"], "command": "advanced_new_file"},
-  { "keys": ["control+n+s"], "command": "new_snippet"},
-  { "keys": ["<", "/"], "command": "close_tag"}
-]

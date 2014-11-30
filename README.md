@@ -6,4 +6,3 @@ Setup for Javascript and Ruby development using bash and git.
 
 ##TODO
 - Install Vagrant by default
-- Redo Sublime install files
