@@ -2,7 +2,7 @@
 
 function setup_brew () {
   echo "$(tput setaf 9)Installing Homebrew..."
-  ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
   brew update
   brew doctor
@@ -76,15 +76,22 @@ function install_casks () {
     clipmenu
     cloud
     dash
+    day-o
     dropbox
     firefox
     flux
     fontprep
     google-chrome
+    google-chrome-canary
+    google-drive
+    google-hangouts
     heroku-toolbelt
+    iterm2
+    jing
     layervault
     macvim
     mou
+    onepassword
     opera
     postgres
     qlcolorcode
@@ -99,7 +106,8 @@ function install_casks () {
     spectacle
     spotify
     sublime-text
-    the-unarchiver
+    teamviewer
+    utorrent
     vagrant
     virtualbox
     vlc
@@ -113,12 +121,22 @@ function install_casks () {
   done
 }
 
+link_alfred () {
+  if brew cask alfred status | grep -q "happily linked"; then
+    echo "Alfred already linked. Skipping."
+  else
+    echo "Linking Alfred to Brew Cask..."
+    brew cask alfred link
+  fi
+}
+
 hide_alias_arrow () {
   mv /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AliasBadgeIcon.icns /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AliasBadgeIcon-bak.icns
-  echo "Removed symlink arrow from applications"
+  echo "Removed symlink arrow from applications."
 }
 
 setup_brew
 install_formulae
 install_casks
+link_alfred
 hide_alias_arrow

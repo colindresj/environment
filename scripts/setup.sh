@@ -40,7 +40,7 @@ set_git () {
 }
 
 setup_ssh () {
-  if [[ ! -d ~/.ssh ]; then
+  if [ ! -d ~/.ssh ]; then
     mkdir ~/.ssh
   fi
 
