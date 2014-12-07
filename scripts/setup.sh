@@ -59,14 +59,6 @@ setup_ssh () {
   ssh -T git@github.com
 }
 
-setup_terminal () {
-  echo "Setting IR Black as terminal default..."
-  open "$SETTINGS/terminal/IR-Black.terminal"
-  sleep 3
-  defaults write com.apple.terminal "Default Window Settings" -string "IR Black"
-  defaults write com.apple.terminal "Startup Window Settings" -string "IR Black"
-}
-
 # Own all directories from home and down
 sudo chown -R ${USER} ~
 
@@ -76,5 +68,5 @@ copy_dotfiles
 # Reloading the session
 source ~/.bash_profile
 
+# Create ssh keys
 setup_ssh
-setup_terminal
