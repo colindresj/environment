@@ -56,6 +56,7 @@ function install_formulae () {
     sqlite
     terminal-notifier
     the_silver_searcher
+    tig
     wget
   )
 
