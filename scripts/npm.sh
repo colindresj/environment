@@ -6,13 +6,19 @@ function install_modules () {
   # TODO use parse function instead of this super long hard-coded array
   declare -a modules=(
     bower
+    broccoli-cli
     browser-sync
+    browserify
     coffee-script
+    david
+    express-generator
     generator-gulp-webapp
     generator-webapp
     grunt-cli
     gulp
     http-server
+    istanbul
+    karma-cli
     less
     mocha
     node-inspector
@@ -21,6 +27,7 @@ function install_modules () {
     requirejs
     stylus
     uglify-js
+    vtop
     yo
   )
 
