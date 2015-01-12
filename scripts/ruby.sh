@@ -88,6 +88,7 @@ install_rbenv_plugins
 
 # Install Ruby version and set as global
 echo "$(tput setaf 3)Installing Rubies..."
+tput sgr0
 rbenv install $RUBY_DEFAULT
 rbenv rehash
 

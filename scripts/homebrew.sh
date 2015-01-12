@@ -2,6 +2,7 @@
 
 function setup_brew () {
   echo "$(tput setaf 9)Installing Homebrew..."
+  tput sgr0
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
   brew update
