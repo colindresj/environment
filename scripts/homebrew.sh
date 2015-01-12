@@ -41,7 +41,6 @@ function install_formulae () {
     mongodb
     mysql
     ngrok
-    node
     openssl
     pianobar
     pkg-config
