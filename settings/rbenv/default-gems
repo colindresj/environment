@@ -1,7 +1,7 @@
 bundler
 rubygems-bundler
 rails
-sass >= 3.4
+sass >=3.4
 pry
 pry-nav
 awesome_print
