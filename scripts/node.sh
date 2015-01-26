@@ -38,6 +38,7 @@ function install_modules () {
     stylus
     uglify-js
     vtop
+    webpack
     yo
   )
 
