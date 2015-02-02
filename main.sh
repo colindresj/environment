@@ -6,7 +6,7 @@
 SETTINGS=./settings
 SCRIPTS=./scripts
 DOTFILES=./dotfiles
-RUBY_DEFAULT="2.1.4"
+RUBY_DEFAULT="2.2.0"
 
 #######################################################################################
 #### UTILITY FUNCTIONS
