@@ -57,6 +57,7 @@ function install_formulae () {
     terminal-notifier
     the_silver_searcher
     tig
+    tree
     wget
   )
 
