@@ -32,6 +32,7 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 # Expose Corners
 defaults write com.apple.dock wvous-tl-corner -int 7
 defaults write com.apple.dock wvous-tr-corner -int 2
+defaults write com.apple.dock autohide-time-modifier -float 0.15
 
 # Dock
 defaults write com.apple.dock "dashboard-in-overlay" -bool true

@@ -39,6 +39,7 @@ function install_modules () {
     uglify-js
     vtop
     webpack
+    webpack-dev-server
     yo
   )
 

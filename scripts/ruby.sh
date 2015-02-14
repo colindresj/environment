@@ -96,7 +96,7 @@ echo "Setting Ruby ${RUBY_DEFAULT} as the global version..."
 rbenv global $RUBY_DEFAULT
 
 # No longer bundle exec
-gem regenerate_binstubs
+regenerate_binstubs
 
 install_gems
 

@@ -12,7 +12,7 @@ copy_dotfiles () {
     pryrc
     vimrc
   )
-  destination=$HOME/dotfiles
+  destination=$HOME/Workspace/dotfiles
   backups=$HOME/dotfiles_old
 
   echo "$(tput setaf 9)Creating $destination to store and track new dotfiles"
@@ -67,6 +67,9 @@ copy_dotfiles
 
 # Reloading the session
 source ~/.bash_profile
+
+# Set git
+set_git
 
 # Create ssh keys
 setup_ssh

@@ -74,6 +74,7 @@ function install_casks () {
 
   # TODO use Brewfile
   declare -a casks=(
+    1password
     alfred
     clipmenu
     cloud
@@ -94,7 +95,6 @@ function install_casks () {
     layervault
     macvim
     mou
-    onepassword
     opera
     postgres
     qlcolorcode
