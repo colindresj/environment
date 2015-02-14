@@ -90,6 +90,7 @@ function install_casks () {
     heroku-toolbelt
     iterm2
     jing
+    karabiner
     layervault
     macvim
     mou
@@ -101,6 +102,7 @@ function install_casks () {
     qlstephen
     quicklook-json
     recordit
+    seil
     sketch
     skype
     slack
