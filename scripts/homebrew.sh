@@ -29,6 +29,7 @@ function install_formulae () {
     apple-gcc42
     autoconf
     automake
+    bash-completion
     brew-cask
     cmatrix
     curl
