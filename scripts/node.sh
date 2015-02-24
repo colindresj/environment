@@ -33,6 +33,7 @@ function install_modules () {
     mocha
     node-inspector
     nodemon
+    node-dev
     prettyjson
     requirejs
     stylus
