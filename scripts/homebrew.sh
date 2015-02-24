@@ -39,6 +39,7 @@ function install_formulae () {
     hub
     imagemagick
     irssi
+    leiningen
     libyaml
     mongodb
     mysql
