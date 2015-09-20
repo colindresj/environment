@@ -90,7 +90,9 @@ function install_casks () {
     google-chrome-canary
     google-drive
     google-hangouts
+    hacker-menu
     heroku-toolbelt
+    huntr
     iterm2
     jing
     karabiner
